@@ -1,0 +1,80 @@
+<!--
+    File: POCKET_POS/index.html
+    This is the main landing page for the application.
+    It provides a simple entry point for both Admin and POS users.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POCKET POS - Home</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons CDN for a great collection of icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <div class="container mx-auto p-4 flex flex-col items-center">
+        <div class="text-center mb-8">
+            <i class="bi bi-wallet-fill text-6xl md:text-8xl text-indigo-300"></i>
+            <h1 class="text-4xl md:text-6xl font-bold mt-4 tracking-tight">POCKET POS</h1>
+            <p class="mt-2 text-xl md:text-2xl text-indigo-200 font-light">Your simple and effective local point-of-sale system.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+
+            <!-- Admin Card -->
+            <div class="card p-8 rounded-2xl border-2 border-indigo-400/50 text-center">
+                <i class="bi bi-person-fill-lock text-5xl text-indigo-300"></i>
+                <h2 class="text-3xl font-bold mt-4">Admin Access</h2>
+                <p class="mt-2 text-indigo-200">Manage inventory, view reports, and configure settings.</p>
+                <a href="admin/login.php" class="mt-6 inline-block w-full text-lg font-semibold py-3 px-6 rounded-xl btn-gradient hover:text-white">
+                    Admin Login
+                </a>
+            </div>
+
+            <!-- POS Card -->
+            <div class="card p-8 rounded-2xl border-2 border-indigo-400/50 text-center">
+                <i class="bi bi-shop text-5xl text-indigo-300"></i>
+                <h2 class="text-3xl font-bold mt-4">POS Terminal</h2>
+                <p class="mt-2 text-indigo-200">Start selling and process transactions with ease.</p>
+                <a href="pos/index.php" class="mt-6 inline-block w-full text-lg font-semibold py-3 px-6 rounded-xl btn-gradient hover:text-white">
+                    Start POS
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

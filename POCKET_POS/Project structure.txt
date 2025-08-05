@@ -1,0 +1,24 @@
+POCKET_POS/
+├── admin/
+│   ├── index.php      // Admin dashboard (Main page)
+│   ├── inventory.php  // Inventory management
+│   ├── sales.php      // Sales history
+│   ├── settings.php   // Admin settings
+│   ├── login.php      // Admin login form
+│   ├── sellers.php    // Adding sellers
+│   └── accountant     // keep track of your gross income and profit
+├── pos/
+│   ├── index.php      // POS interface (Main page)
+│   ├── login.php      // POS seller login
+│   └── search_items.php 
+├── includes/
+│   ├── db_connect.php // Database connection file
+│   └── header.php     // Reusable header/navigation
+├── assets/
+│   ├── css/
+│   │   └── style.css  // Custom CSS
+│   ├── js/
+│   │   └── script.js  // Custom JavaScript
+│   └── images/      // For a logo if you choose
+├── index.html         // Landing page
+└── logout.php         // Handles session logout
